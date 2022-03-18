@@ -5,6 +5,7 @@ export DATE=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
 export BUILD_DATE=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
 export COMMIT=$(echo "$SHA" | cut -c -7)
 
+echo $GITHUB_BASE_REF
 if  [ $GITHUB_BASE_REF = "develop" ]; then
   export MY_APP=$(echo $(echo "${GITHUB_REPOSITORY}" | awk -F / '{print $2}')"-develop")
 elif [ $GITHUB_BASE_REF = "main" ] || [ $GITHUB_BASE_REF = "master" ]; then
