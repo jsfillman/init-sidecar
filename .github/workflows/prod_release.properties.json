@@ -1,0 +1,5 @@
+{
+    "name": "Build Production Release Image",
+    "description": "Builds & publishes the semantic releases via 'Create a new release'.",
+    "iconName": "kbase-bot"
+}
