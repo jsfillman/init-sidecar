@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 
-export MY_ORG=$(echo "${GITHUB_REPOSITORY}" | awk -F / '{print $1}')
+export MY_ORG=$(echo "${GITHUB_REPOSITORY}" | awk -F / '{print tolower($1)}')
 export MY_APP=$(echo "${GITHUB_REPOSITORY}" | awk -F / '{print $2}')
 export DATE=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
 export BUILD_DATE=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
