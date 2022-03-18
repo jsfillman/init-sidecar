@@ -1,10 +1,11 @@
 ---
-name: Build Prod RC Image
+name: Build Image on PR
 'on':
   pull_request:
     branches:
-    - master
+    - develop
     - main
+    - master
     types:
     - opened
     - synchronize
@@ -25,4 +26,4 @@ jobs:
         SHA: "${{ github.event.pull_request.head.sha }}"
         DOCKER_ACTOR: "${{ secrets.GHCR_USERNAME }}"
         DOCKER_TOKEN: "${{ secrets.GHCR_TOKEN }}"
-      run: "./.github/workflows/scripts/build_prodrc_pr.sh\n"
+      run: "./.github/workflows/scripts/pr_build.sh\n"

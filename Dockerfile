@@ -42,3 +42,5 @@ RUN \
  apt install /data/db/tmp/mongodb-org-shell_4.4.4_amd64.deb; \
  apt install /data/db/tmp/mongodb-org-server_4.4.4_amd64.deb; \
  rm /data/db/tmp/*.deb
+
+ENTRYPOINT [ "/usr/local/bin/w8s4" ]
