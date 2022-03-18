@@ -2,6 +2,10 @@
 name: Build Image on PR
 'on':
   pull_request:
+    branches:
+      - develop
+      - master
+      - main
     types:
     - opened
     - synchronize
